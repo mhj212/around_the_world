@@ -1,0 +1,18 @@
+<div id="story-container">
+	<div class="country-main-div animated fadeIn">
+      <h1><%= @story[0].country %></h1>
+
+
+      <div id="story_list">
+      </div><!-- story list -->
+
+      <%= render text: File.read("app/assets/javascripts/templates.js").html_safe %>
+
+     <form id="story_form">
+       <input id="story_title_input" type="text" name="story_title_input" placeholder="Title" />
+       <input id="story_body_input" type="text" name="story_body_input" placeholder="Body" />
+       <input id="name_input" type="text" name="name_input" placeholder="Your Name" />
+     </form>
+     
+    </div>
+</div><!-- Thailand container! -->

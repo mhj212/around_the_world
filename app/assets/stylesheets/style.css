@@ -1,0 +1,105 @@
+
+#main-page-container {
+	background-image: url('positano-italy.jpg');
+	background-size: cover;
+	height: 1000px; 
+	margin: 0 auto;
+	width: 100%;
+
+}
+
+.main-page-div {
+    position: absolute;
+    margin: 70px;
+	padding: 100px;
+	background: rgba(255,255,255,0.5);
+	text-align: center;
+    font-family: 'Esteban', serif;
+}
+
+.main-page-div h1 {
+	font-size: 100px;
+}
+
+
+.main-page-div h3 {
+	font-size: 25px;
+}
+
+.main-page-div a {
+	font-size: 25px;
+	color: black;
+	text-decoration: none;
+}
+
+.main-page-div a:hover{
+	color: white;
+    text-decoration: underline;
+}
+
+.main-page-div a {
+	margin: auto 0;
+	text-align: center;
+}
+
+/* SHOW COUNTRY PAGES */
+
+#story-container {
+	background-size: cover;
+	height: 1000px; 
+	margin: 0 auto;
+	width: 100%;
+
+}
+
+.country-main-div {
+    position: absolute;
+    margin: 70px;
+	padding: 100px;
+	width: 75%;
+	background: rgba(255,255,255,0.6);
+	text-align: center;
+    font-family: 'Esteban', serif;
+}
+
+
+.country-main-div h1 {
+	font-size: 100px;
+}
+
+/* STORY TEMPLATE */
+
+
+
+
+/* FOOTER */
+
+#footer {
+	background-image: url('panoramic-hongkong.jpg');
+	background-size: cover;
+	
+}
+
+.footer-box {
+	padding: 20px;
+   	background: rgba(255,255,255,0.5);
+    font-family: 'Esteban', serif;
+}
+
+.footer-box h3 {
+  position: relative;
+  font-size: 25px;
+
+}
+
+.footer-box a {
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
+}
+
+.footer-box a:hover{
+	color: white;
+    text-decoration: underline;
+}
+

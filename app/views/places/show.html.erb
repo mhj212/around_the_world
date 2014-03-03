@@ -1,0 +1,79 @@
+<div id="story-container" style="background-image:url(<%= @place.background_img %>)">
+	<div class="country-main-div animated fadeIn">
+      <h1><%= @place.name %></h1>
+
+      <div id="story_list">
+      </div><!-- story list -->
+
+      <%= render text: File.read("app/assets/javascripts/templates.js").html_safe %>
+
+
+     <form id="new_story_form">
+       <input id="story_title_input" type="text" name="story_title_input" placeholder="Title" />
+       <input id="story_body_input" type="text" name="story_body_input" placeholder="Body" />
+       <input type="hidden" name="new_place_id" value="<%= @place.id%>">
+
+
+    <button class='create_button'>create</button>
+    <button class='update_button'>update</button>
+     </form>
+     
+    </div><!-- country-main-div -->
+
+</div><!-- story container! -->
+<div id="footer"> 
+    <div class="footer-box">
+<!--     <table style="width:1200px">
+      <tr>
+       <td><a href="/">Home</a></td>
+      </tr>
+    </table> -->
+      <div class="devise_nav">
+
+  <%if current_user %>
+    Signed in as <%= current_user.email %>.  Not you?
+    <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %>
+   <% end %>
+
+  </div> <!-- devise nav -->
+  <br>
+    <h3><a href="/">Home</a></h3>
+    <br>
+
+      <table style="width:1200px">
+    <tr>
+      <td><a><%= link_to @places[0].name, place_path(@places[0].id) %></a></td>
+      <td><a><%= link_to @places[1].name, place_path(@places[1].id) %></a></td> 
+      <td><a><%= link_to @places[2].name, place_path(@places[2].id) %></a></td>
+      <td><a><%= link_to @places[3].name, place_path(@places[3].id) %></a></td>
+    </tr>
+    <tr>
+      <td><a><%= link_to @places[4].name, place_path(@places[4].id) %></a></td>
+      <td><a><%= link_to @places[5].name, place_path(@places[5].id) %></a></td> 
+      <td><a><%= link_to @places[6].name, place_path(@places[6].id) %></a></td>
+      <td><a><%= link_to @places[7].name, place_path(@places[7].id) %></a></td>
+    </tr>
+    <tr>
+      <td><a><%= link_to @places[8].name, place_path(@places[8].id) %></a></td>
+      <td><a><%= link_to @places[9].name, place_path(@places[9].id) %></a></td> 
+      <td><a><%= link_to @places[10].name, place_path(@places[10].id) %></a></td>
+      <td><a><%= link_to @places[11].name, place_path(@places[11].id) %></a></td>
+    </tr>
+    <tr>
+      <td><a><%= link_to @places[12].name, place_path(@places[12].id) %></a></td>
+      <td><a><%= link_to @places[13].name, place_path(@places[13].id) %></a></td> 
+      <td><a><%= link_to @places[14].name, place_path(@places[14].id) %></a></td>
+      <td><a><%= link_to @places[15].name, place_path(@places[15].id) %></a></td>
+    </tr>
+    <tr>
+      <td><a><%= link_to @places[16].name, place_path(@places[16].id) %></a></td>
+      <td><a><%= link_to @places[17].name, place_path(@places[17].id) %></a></td> 
+      <td><a><%= link_to @places[18].name, place_path(@places[18].id) %></a></td>
+      <td><a><%= link_to @places[19].name, place_path(@places[19].id) %></a></td>
+    </tr>
+
+    </table> 
+    </div><!-- footer box -->
+</div><!-- footer -->

@@ -1,0 +1,67 @@
+<div id="main-page-container">
+
+  <div class="main-page-div animated fadeIn">
+	<h1>Around The World</h1> 
+	      <br>
+
+	  <div class="intro">  
+	  <h3>Hey, my name is Matthew.  I was lucky enough to travel all over the world.  Here I would like to share stories of my travels as well as welcome stories from others.  Here are some of my adventures.</h3>
+
+      <h5>This background photo is Positano, Italy.  I visited here when I was around 12 years old.</h5>
+	  </div><!-- intro div -->
+          <br><br><br>
+
+
+
+ 
+
+      <table style="width:900px">
+		<tr>
+		  <td><a><%= link_to @places[0].name, place_path(@places[0].id) %></a></td>
+		  <td><a><%= link_to @places[1].name, place_path(@places[1].id) %></a></td> 
+		  <td><a><%= link_to @places[2].name, place_path(@places[2].id) %></a></td>
+		  <td><a><%= link_to @places[3].name, place_path(@places[3].id) %></a></td>
+		</tr>
+		<tr>
+		  <td><a><%= link_to @places[4].name, place_path(@places[4].id) %></a></td>
+		  <td><a><%= link_to @places[5].name, place_path(@places[5].id) %></a></td> 
+		  <td><a><%= link_to @places[6].name, place_path(@places[6].id) %></a></td>
+		  <td><a><%= link_to @places[7].name, place_path(@places[7].id) %></a></td>
+		</tr>
+		<tr>
+		  <td><a><%= link_to @places[8].name, place_path(@places[8].id) %></a></td>
+		  <td><a><%= link_to @places[9].name, place_path(@places[9].id) %></a></td> 
+		  <td><a><%= link_to @places[10].name, place_path(@places[10].id) %></a></td>
+		  <td><a><%= link_to @places[11].name, place_path(@places[11].id) %></a></td>
+		</tr>
+		<tr>
+		  <td><a><%= link_to @places[12].name, place_path(@places[12].id) %></a></td>
+		  <td><a><%= link_to @places[13].name, place_path(@places[13].id) %></a></td> 
+		  <td><a><%= link_to @places[14].name, place_path(@places[14].id) %></a></td>
+		  <td><a><%= link_to @places[15].name, place_path(@places[15].id) %></a></td>
+		</tr>
+		<tr>
+		  <td><a><%= link_to @places[16].name, place_path(@places[16].id) %></a></td>
+		  <td><a><%= link_to @places[17].name, place_path(@places[17].id) %></a></td> 
+		  <td><a><%= link_to @places[18].name, place_path(@places[18].id) %></a></td>
+		  <td><a><%= link_to @places[19].name, place_path(@places[19].id) %></a></td>
+		</tr>
+
+		</table> 
+         <br><br>
+		  <div class="devise_nav">
+         
+		  <%if current_user %>
+		    Signed in as <%= current_user.email %>.  Not you?<br>
+		    <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
+		  <% else %>
+		  <p>Click here to:</p>
+		    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Sign in", new_user_session_path %>
+		   <% end %>
+
+		  </div> <!-- devise nav -->
+    
+	
+  </div><!-- main-page-div -->
+
+</div><!-- container -->
