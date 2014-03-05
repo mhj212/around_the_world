@@ -1,5 +1,14 @@
 source 'https://rubygems.org'
 
+
+
+gem 'rspec-rails', :group => [:test, :development]
+group :test, :development do
+  gem 'rspec'	
+  gem 'capybara'
+  gem 'selenium-webdriver'
+end
+
 gem 'pry'
 
 gem 'devise'
@@ -34,6 +43,9 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+gem 'rails_12factor', group: :production
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

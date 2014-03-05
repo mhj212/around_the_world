@@ -30,11 +30,12 @@
 	font-size: 25px;
 	color: black;
 	text-decoration: none;
+	padding: 5px;
 }
 
 .main-page-div a:hover{
 	color: white;
-    text-decoration: underline;
+    
 }
 
 .main-page-div a {
@@ -42,6 +43,10 @@
 	text-align: center;
 }
 
+.country-list {
+	text-align: left;
+	padding: 0px 0px 0px 160px;
+}
 /* SHOW COUNTRY PAGES */
 
 #story-container {
@@ -57,7 +62,7 @@
     margin: 70px;
 	padding: 100px;
 	width: 75%;
-	background: rgba(255,255,255,0.6);
+	background: rgba(255,255,255,0.7);
 	text-align: center;
     font-family: 'Esteban', serif;
 }
@@ -67,8 +72,24 @@
 	font-size: 100px;
 }
 
-/* STORY TEMPLATE */
+/* STORY INPUT */
 
+#story_body_input {
+	width: 350px;
+}
+
+/* STORY TEMPLATE */
+#story_list {
+	text-align: center;
+}
+
+#story_list h3 {
+   font-size: 25px;
+}
+
+#story_list p {
+
+}
 
 
 
@@ -84,6 +105,7 @@
 	padding: 20px;
    	background: rgba(255,255,255,0.5);
     font-family: 'Esteban', serif;
+
 }
 
 .footer-box h3 {
@@ -100,6 +122,6 @@
 
 .footer-box a:hover{
 	color: white;
-    text-decoration: underline;
+    
 }
 

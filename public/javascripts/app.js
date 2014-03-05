@@ -6,8 +6,6 @@ var CurrentUser = Backbone.Model.extend({
 
 
 
-
-
 var Story = Backbone.Model.extend({
 
   delete: function(){
@@ -52,7 +50,7 @@ var StoryView = Backbone.View.extend({
       console.log(window.current_user.id);
       console.log("-------------author--------------------");
       console.log(this.model);
-      
+
     if (current_user.id === this.model.get('user_id')) {
 
     // ========================================

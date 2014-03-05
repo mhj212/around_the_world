@@ -120,7 +120,7 @@ Story.create({
 
 Story.create({
 	title: "Pink Sand",
-	body: "One of my travel querks was that if I was in a country with sand, I would scoop some up in an empty water bottle and take it home.  I actually have many bottles at home, for example I have sand from mayan ruins, sand from the giza pyramids.  Bermuda's sand is what I remember most from my trip because it had a pink color to it.. unlike anything I've seen before.",
+	body: "One of my travel querks was that if I was in a country with sand, I would scoop some up in an empty water bottle and take it home.  I actually have many bottles at home, for example I have sand from mayan ruins and sand from the giza pyramids.  Bermuda's sand is what I remember most from my trip because it had a pink color to it.. unlike anything I've seen before.",
 	img_url: "",
     place_id: bermudaP.id,
     user_id: 1
@@ -144,7 +144,7 @@ Story.create({
 
 Story.create({
 	title: "Egyptian Carpeting School",
-	body: "In a taxi on the way back from visiting the giza pyramids, we stopped at an egyptian carpeting school to view some carpets.  What was disturbing was in the basement we saw dozens of kids working on making carpets... was this child labor or was this school training these kids to make a living making carpets?  It was unclear to us... either way it made me thankful I grew up with more opprotunity.",
+	body: "In a taxi on the way back from visiting the giza pyramids, we stopped at an egyptian carpeting school to view some carpets for sale.  What was disturbing was in the basement we saw dozens of kids working on making carpets... was this child labor or was this school training these kids to make a living making carpets?  It was unclear to us... either way it made me thankful I grew up with more opprotunity.",
 	img_url: "",
 	place_id: egyptP.id,
 	user_id: 1
@@ -152,7 +152,7 @@ Story.create({
 
 Story.create({
 	title: "Visiting My Sister",
-	body: "My older sister lived in Paris for a year tutoring students and interning at the United Nations.  Being that I am a huge foodie, we went to a lot of fantastic French restaurants.  I particularly remember in Oberkampf (a hip Parisian neighborhood) eating an escargot dish that blew me away.  I also have a few friends in Paris now that I'd like to visit someday.",
+	body: "My older sister lived in Paris for a year tutoring students and interning at the United Nations.  Being that I am a huge foodie, we went to a lot of fantastic French restaurants.  I particularly remember in Oberkampf (a hip Parisian neighborhood) eating an escargot dish that blew me away.",
 	img_url: "",
 	place_id: franceP.id,
 	user_id: 1
@@ -176,7 +176,7 @@ Story.create({
 
 Story.create({
 	title: "Drinking with Friends of Friends",
-	body: "One night in Tokyo, I hung out with japanese friends.  We went bar crawling around Shibuya.  It was interesting to see Budweiser as an imported beer that was popular to the japanse people I was with.",
+	body: "One night in Tokyo, I hung out with japanese friends I met growing up in New York.  We went bar crawling around Shibuya (a neighborhood in Tokyo).  It was fun to meet my friends' japanese friends.  With my friends playing the role of translator, I had the chance to talk to their friends.  I had some very fun nights with these people.",
 	img_url: "",
 	place_id: japanP.id,
 	user_id: 1
@@ -184,14 +184,14 @@ Story.create({
 
 Story.create({
 	title: "The City of Frankfurt",
-	body:  "My family and I was only in Germany for a day (we were inbetween flights).  What I remember most was the food.  We ate a restaurant called Wagners which served traditional German cuisine.  I remember the portions being enourmous but also tasty.",
+	body:  "My family and I was only in Germany for a day (we were inbetween flights).  What I remember most was the food.  We ate at a restaurant called Wagners which served traditional German cuisine.  I remember the portions being enourmous but also tasty.",
 	img_url:"",
 	place_id: germanyP.id,
 	user_id: 1
 	})
 Story.create({
     title: "Playdates with the Locals",
-    body: "Greece was the first country I've been to.  I traveled here when I was 9 years old.  I remember visiting Mykonos, a gorgeous island in the Mediterranean.  I remember becoming friends with the local kids around my age.  I remembered we played manhunt and soccer.  One spoke excellent english, a dutch boy whose family lived on the island.",
+    body: "Greece was the first country I've been to.  I traveled here when I was 9 years old.  I remember visiting Mykonos, a gorgeous island in the Mediterranean.  I remember becoming friends with the local kids around my age.  I remembered we played manhunt and soccer.",
     img_url: "",
     place_id: greeceP.id,
     user_id: 1
@@ -199,7 +199,7 @@ Story.create({
 
 Story.create({
 	title: "A Mayan Temple City",
-	body: "My family and I visited Tikal, the capital Mayan city now in ruins.  The temples were amazing to explore.",
+	body: "My family and I visited Tikal, the capital Mayan city.  The temples were breathtaking and fun to explore.  I remember seeing many other tourists here.",
 	img_url: "",
 	place_id: guatemalaP.id,
 	user_id: 1
@@ -215,7 +215,7 @@ Story.create({
 
 Story.create({
 	title: "Nantucket House",
-	body: "My parents rented a house by the beach in Nantucket in 2011.  I visited for a week and loved visiting the place.",
+	body: "My parents rented a house by the beach in Nantucket in 2011.  I visited for a week and loved it.  I fell in love with going to the beach and swimming in the water.  I'd love to spend a summer at a place like this.. defintely a different lifestyle than New York City.",
 	img_url: "",
 	place_id: nantucketP.id,
 	user_id: 1
@@ -230,7 +230,7 @@ Story.create({
 	})
 Story.create({
 	title: "The Flamenco Guitar",
-	body: "In Barcelona my family and I visited a guitar shop.  I've been a guitarist my whole life and was happy to browse the shop and play a few guitars.  I ended up falling in love with a relatively cheap, nylon-stringed flamenco guitar.  After playing with it for about 20 minutes I decided to buy it.",
+	body: "In Barcelona my family and I visited a guitar shop.  I've been a guitarist my whole life and was happy to browse the shop and play a few guitars.  I ended up falling in love with a relatively cheap, nylon-stringed flamenco guitar.  After playing with it for about 20 minutes I decided to buy it and bring it home with me.",
 	img_url: "",
 	place_id: spainP.id,
 	user_id: 1
@@ -246,7 +246,7 @@ Story.create({
 
 Story.create({
 	title: "Dog Tags for Sale",
-	body: "In a town in Vietnam, at a tourist shop I saw a plate of US dogtags from the Vietnam War.  They were selling them for a few dollars each.  Seeing them on the plate I wondered whether the soldiers were dead or alive.",
+	body: "In a town in Vietnam at a tourist shop, I saw a plate of US dogtags from the Vietnam War.  They were selling them for a few dollars each.  It was shocking to see.",
 	img_url: "",
 	place_id: vietnamP.id,
 	user_id: 1

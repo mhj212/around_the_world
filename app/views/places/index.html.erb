@@ -10,11 +10,63 @@
       <h5>This background photo is Positano, Italy.  I visited here when I was around 12 years old.</h5>
 	  </div><!-- intro div -->
           <br><br><br>
+     <div class="country-list">       
+		  <a><%= link_to @places[0].name, place_path(@places[0].id) %></a><a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+		  <a><%= link_to @places[1].name, place_path(@places[1].id) %></a> <a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+		  <a><%= link_to @places[2].name, place_path(@places[2].id) %></a><a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+		  <a><%= link_to @places[3].name, place_path(@places[3].id) %></a>
+        <br>
+		  <a><%= link_to @places[4].name, place_path(@places[4].id) %></a><a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+		  <a><%= link_to @places[5].name, place_path(@places[5].id) %></a><a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+		  <a><%= link_to @places[6].name, place_path(@places[6].id) %></a><a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+		  <a><%= link_to @places[7].name, place_path(@places[7].id) %></a>
+         <br>
+		  <a><%= link_to @places[8].name, place_path(@places[8].id) %></a><a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+		  <a><%= link_to @places[9].name, place_path(@places[9].id) %></a><a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+		  <a><%= link_to @places[10].name, place_path(@places[10].id) %></a><a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+		  <a><%= link_to @places[11].name, place_path(@places[11].id) %></a>
+        <br>
+		  <a><%= link_to @places[12].name, place_path(@places[12].id) %></a><a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+		  <a><%= link_to @places[13].name, place_path(@places[13].id) %></a> <a>&nbsp&nbsp&nbsp&nbsp</a>
+		  <a><%= link_to @places[14].name, place_path(@places[14].id) %></a><a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+		  <a><%= link_to @places[15].name, place_path(@places[15].id) %></a>
+         <br>
+		  <a><%= link_to @places[16].name, place_path(@places[16].id) %></a><a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+		  <a><%= link_to @places[17].name, place_path(@places[17].id) %></a><a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+		  <a><%= link_to @places[18].name, place_path(@places[18].id) %></a><a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+		  <a><%= link_to @places[19].name, place_path(@places[19].id) %></a>
+        </div>
 
 
+<!-- 		<ul>
+		  <li><a><%= link_to @places[0].name, place_path(@places[0].id) %></a></li>
+		  <li><a><%= link_to @places[1].name, place_path(@places[1].id) %></a></li> 
+		  <li><a><%= link_to @places[2].name, place_path(@places[2].id) %></a></li>
+		  <li><a><%= link_to @places[3].name, place_path(@places[3].id) %></a></li>
+        <br>
+		  <li><a><%= link_to @places[4].name, place_path(@places[4].id) %></a></li>
+		  <li><a><%= link_to @places[5].name, place_path(@places[5].id) %></a></li> 
+		  <li><a><%= link_to @places[6].name, place_path(@places[6].id) %></a></li>
+		  <li><a><%= link_to @places[7].name, place_path(@places[7].id) %></a></li>
+         <br>
+		  <li><a><%= link_to @places[8].name, place_path(@places[8].id) %></a></li>
+		  <li><a><%= link_to @places[9].name, place_path(@places[9].id) %></a></li> 
+		  <li><a><%= link_to @places[10].name, place_path(@places[10].id) %></a></li>
+		  <li><a><%= link_to @places[11].name, place_path(@places[11].id) %></a></li>
+        <br>
+		  <li><a><%= link_to @places[12].name, place_path(@places[12].id) %></a></li>
+		  <li><a><%= link_to @places[13].name, place_path(@places[13].id) %></a></li> 
+		  <li><a><%= link_to @places[14].name, place_path(@places[14].id) %></a></li>
+		  <li><a><%= link_to @places[15].name, place_path(@places[15].id) %></a></li>
+         <br>
+		  <li><a><%= link_to @places[16].name, place_path(@places[16].id) %></a></li>
+		  <li><a><%= link_to @places[17].name, place_path(@places[17].id) %></a></li> 
+		  <li><a><%= link_to @places[18].name, place_path(@places[18].id) %></a></li>
+		  <li><a><%= link_to @places[19].name, place_path(@places[19].id) %></a></li>
+        </ul>
+ -->
 
- 
-
+<!-- 
       <table style="width:900px">
 		<tr>
 		  <td><a><%= link_to @places[0].name, place_path(@places[0].id) %></a></td>
@@ -47,7 +99,11 @@
 		  <td><a><%= link_to @places[19].name, place_path(@places[19].id) %></a></td>
 		</tr>
 
-		</table> 
+		</table>
+		 -->
+
+
+
          <br><br>
 		  <div class="devise_nav">
          
