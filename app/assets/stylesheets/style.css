@@ -1,6 +1,7 @@
 
 #main-page-container {
-	background-image: image-url('public/positano-italy.jpg');
+	background-image: url('positano-italy.jpg');
+
 	background-size: cover;
 	height: 1000px; 
 	margin: 0 auto;
