@@ -46,7 +46,7 @@
        
         <% if current_user %>
         
-          <span class="signedin" style="background: rgba(255,255,255,0.5)"> Signed in as <%= current_user.email %>.</span></li><span class="signedin" style="background: rgba(255,255,255,0.5)">Not you?</span><li> 
+          <span class="signedin"> Signed in as <%= current_user.email %>.</span></li><span class="signedin">Not you?</span><li> 
           <%= link_to "Sign out", destroy_user_session_path, method: "delete", class: "signedin" %></li>
         <% else %> 
         
@@ -80,8 +80,7 @@
      <form id="new_story_form">
        <input id="story_title_input" type="text" name="story_title_input" placeholder="Title" /><br>
        <input id="story_body_input" type="textarea" name="story_body_input" placeholder="Body" /><br>
-       <input id="new_place_id" type="hidden" name="new_place_id" value="<%= @place.id%>"> 
-       <input id="new_user_id"type="hidden" name="new_user_id" value="<%= current_user.id %>">
+       <input type="hidden" name="new_place_id" value="<%= @place.id%>">
 
 
     <button class='create_button'>create</button>

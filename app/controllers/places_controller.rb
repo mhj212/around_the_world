@@ -2,6 +2,10 @@ class PlacesController < ApplicationController
 	def index
 	  #@countries = Story.select("distinct country, id").group(:country, :id)
 	  @places = Place.all
+    respond_to do |format|
+      format.html
+      format.json {render :json => @places }
+    end
 	end
 
 	def edit
@@ -10,13 +14,13 @@ class PlacesController < ApplicationController
 	end
 
 	def update
-       @story = Story.find(params:[:id])
+       @story = Story.find(params[:id])
        @story.update_attributes(story_params)
        render json: @story
 	end
 
     def new
-     @story. Story.new
+     @story.Story.new
     end
 
     def show
@@ -43,6 +47,6 @@ class PlacesController < ApplicationController
 
     private
     def story_params
-      params.permit(:title, :body, :place_id)
+      params.permit(:title, :body, :place_id, :user_id)
     end
 end

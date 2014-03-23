@@ -14,11 +14,6 @@ alaskaP = Place.create({
 	background_img: "../assets/Alaska-background.jpg"
 	})
 
-brazilP = Place.create({
-	name: "Brazil",
-	background_img: "../assets/brazil-rio.jpg"
-	})
-
 belizeP = Place.create({
 	name: "Belize",
 	background_img: "../assets/belize-boardwalk.jpg"
@@ -27,18 +22,25 @@ bermudaP = Place.create({
 	name: "Bermuda",
 	background_img: "../assets/Bermuda-Beach.jpg"
 	})
+
+brazilP = Place.create({
+	name: "Brazil",
+	background_img: "../assets/brazil-rio.jpg"
+	})
+
 canadaP = Place.create({
 	name: "Canada",
 	background_img: "../assets/canada-toronto.jpg"
-	})
-englandP = Place.create({
-	name: "England",
-	background_img: "../assets/england-london.jpeg"
 	})
 egyptP = Place.create({
 	name: "Egypt",
 	background_img: "../assets/egypt-cairo.jpg"
 	})
+englandP = Place.create({
+	name: "England",
+	background_img: "../assets/england-london.jpeg"
+	})
+
 franceP = Place.create({
 	name: "France",
 	background_img: "../assets/france-town.jpg"

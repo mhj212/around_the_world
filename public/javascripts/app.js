@@ -35,6 +35,8 @@ var StoryView = Backbone.View.extend({
         self.render();
       }
     });
+
+
   },
   template: function(attrs){
     var html_string = $('#story_template').html();
@@ -49,15 +51,15 @@ var StoryView = Backbone.View.extend({
       console.log("-------------current user--------------");
       console.log(window.current_user.id);
       console.log("-------------author--------------------");
-      console.log(this.model);
+      console.log(this.model.get('user_id'));
 
-    if (current_user.id === this.model.get('user_id')) {
+     if (current_user.id === this.model.get('user_id')) {
 
     // ========================================
     // ===== WARNING:  DANGER.JS  AHEAD =======
     // ========================================
     
-    // super duper advanced button magic for pokemon begins
+    // super duper advanced button magic begins
       var model_proto = this.model.__proto__;
       _.each(model_proto, function(value, prop){
           // console.log(prop)
@@ -76,7 +78,7 @@ var StoryView = Backbone.View.extend({
         })
       }
     // super advanced magic ends
-  }
+   }
 })
 
 var FormView = Backbone.View.extend({
@@ -85,6 +87,8 @@ var FormView = Backbone.View.extend({
     // this.list = new PokemonListView();
     // hides the update button
     this.$('.update_button').hide();
+
+    
   },
 
   el: function(){
@@ -97,9 +101,11 @@ var FormView = Backbone.View.extend({
     this.$('.create_button').hide();
     this.$('.update_button').show();
 
-    // inserts pokemon attributes into my form inputs
+    // inserts attributes into my form inputs
     this.$('#story_title_input').val(model.get("title"));
     this.$('#story_body_input').val(model.get("body"));
+    this.$('#new_place_id').val(model.get("place_id"));
+    this.$('#new_user_id').val(model.get("user_id"));
     // this.$('#pokemon_select').val(model.get("pokemon_type"));
 
     // attach an on click callback function
@@ -111,6 +117,8 @@ var FormView = Backbone.View.extend({
       model.set({
         "title": form_view.$('#story_title_input').val(),
         "body": form_view.$('#story_body_input').val(),
+        "place_id": form_view.$('#new_place_id').val(),
+        "user_id": form_view.$('#new_user_id').val(),
        // "pokemon_type" : form_view.$('#pokemon_select').val()
       })
 
@@ -124,6 +132,8 @@ var FormView = Backbone.View.extend({
 
       // unbinds this "update" callback from the button
       $(this).off("click");
+
+
     })   
   },
 
@@ -143,7 +153,8 @@ var FormView = Backbone.View.extend({
     story_list_view.collection.create({
       title: array_of_input_data[0].value,  // $('#name_input').val()
       body: array_of_input_data[1].value,
-      place_id: array_of_input_data[2].value
+      place_id: array_of_input_data[2].value,
+      user_id: array_of_input_data[3].value,
       // pokemon_type: array_of_input_data[2].value
     });
     this.resetValues()
@@ -196,12 +207,16 @@ var StoryListView = Backbone.View.extend({
 
 
     var place_id = parseInt(location.pathname.replace('/places/', ''));
+    window.place_id = place_id
 
     this.collection = new StoryCollection();
     // any change to the collection causes the PListView to re-render itself
     this.listenTo(this.collection, "all", this.render );
     this.collection.fetch({data: {place_id: place_id}});
     this.views = [];
+
+    // console.log("place_id", _.where(places, {id: place_id}))
+    
 
   },
 
@@ -249,7 +264,30 @@ $(function(){
 
   window.current_user.fetch();
 
-  // ??????
+  $.getJSON("/places.json", function(data){
+    window.places = data
+    $("body").css({
+
+      // background: "url("+_.where(places, {id: place_id})[0]["background_img"]+")",
+      
+      // height: document.body.clientHeight
+      // height: "1000 px"
+    })
+    
+
+    // debugger
+  })
+
+    //   $("body").on("resize", function(e){
+
+    
+    //   $(e.target).css("height", "document.body.clientHeight");
+    //  // $(e.target).css("height", "1000px");
+    // // $(e.target).css("background-size", "cover");
+    //   })
+
+
+  
   // $('#main_container').append($('#heading_template').html())
 
-})
+ })

@@ -10,9 +10,11 @@ class StoriesController < ApplicationController
 
     def create
      @story = Story.create(story_params)
-      place = Place.find(params[:place_id])
-      place.stories << @story
      render json: @story
+     # @story = Story.create(story_params)
+     #  place = Place.find(params[:place_id])
+     #  place.stories << @story
+     # render json: @story
     end
 
     def show
@@ -28,14 +30,14 @@ class StoriesController < ApplicationController
     def destroy
 
       @story = Story.find(params[:id])
-      current_user.delete_story(story)
-      # Story.delete(params[:id])
-      # render json: {success: true}
+      # current_user.delete_story(story)
+      Story.delete(params[:id])
+      render json: {success: true}
     end
 
     private
     def story_params
-      params.permit(:title, :body, :place_id)
+      params.permit(:title, :body, :place_id, :user_id)
     end
 
 end
