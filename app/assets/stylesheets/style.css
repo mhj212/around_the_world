@@ -1,10 +1,13 @@
-
+/* TAQQUI */
+html, body {
+	
+	min-height: 100%;
+}
 #main-page-container {
 	background-image: url('positano-italy.jpg');
-
 	background-size: cover;
-	height: 1000px; 
 	margin: 0 auto;
+	height: 1000px; 
 	/*width: 100%;*/
     width: 1245px;
 }
@@ -60,20 +63,24 @@
 	width: 100%;
 
     /* set dimensions */ 
-	height: 1000px;
+/*height: 1000px;*/
+height: 100%;
+padding-bottom: 100px;
 	/*width: 1245px;*/
 
 }
 
 .country-main-div {
-    position: absolute;
+/*position: absolute;*/
+position: relative;
+top: 60px;
     margin: 95px;
 	padding: 100px;
-	width: 75%;
+	/*width: 80%;*/
 	background: rgba(255,255,255,0.7);
 	text-align: center;
     font-family: 'Esteban', serif;
-
+margin-top: 0px;
     /* Set Dimensions */
     /*width: 1000px;*/
 }
@@ -135,6 +142,8 @@
 	color: white;
     
 }
+
+
 
 
 /* NAV */
@@ -210,6 +219,86 @@
     left:-9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
 }
 
+
+/* places */
+
+
+
+#places{
+	display: inline;
+    list-style:none;
+    font-weight:bold;
+    margin-bottom:10px;
+    /* Clear floats */
+    float:left;
+    width:100%;
+   /* Bring the nav above everything else--uncomment if needed.
+    position:relative;
+    z-index:5;
+    */
+    position:relative;
+    z-index:5;
+}
+#places li{
+    float:left;
+    margin-right:10px;
+    position:relative;
+}
+#places li a{
+    display:block;
+    padding:4px;
+    color: black;
+    /*background:#333;*/
+    text-decoration:none;
+    background: rgba(255,255,255,0.5)
+}
+#places li ul li a:hover{
+    color: white;
+    
+    
+}
+
+/*--- DROPDOWN ---*/
+#places ul{
+    background:#fff;/* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+    background:rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+    list-style:none;
+    position:absolute;
+    left:-9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+}
+#places ul li{
+    padding-top:1px; /* Introducing a padding between the li and the a give the illusion spaced items */
+    float:none;
+}
+#places ul a{
+	color: black;
+    white-space:nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+}
+#places li ul{ /* Display the dropdown on hover */
+    left:0; /* Bring back on-screen when needed */
+}
+#places li a{ /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+    text-decoration:none;
+    background: rgba(255,255,255,0.5)
+}
+#places li ul a{ /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+    text-decoration:none;
+    background: rgba(255,255,255,0.5)
+}
+/*#nav li:hover ul li a:hover{  Here we define the most explicit hover states--what happens when you hover each individual link. 
+    background:#333;
+}*/
+
+#places ul{
+    background:#fff; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+    background:rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+    list-style:none;
+    position:absolute;
+    left:-9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+}
+
+
+
 /* test */
 
 .sign_in_up{
@@ -223,8 +312,3 @@
 }
 
 
-body {
-/*	background-size: cover;
-	height: 1000px;*/
-
-}

@@ -53,7 +53,7 @@ var StoryView = Backbone.View.extend({
       console.log("-------------author--------------------");
       console.log(this.model.get('user_id'));
 
-     if (current_user.id === this.model.get('user_id')) {
+     if (current_user.id === this.model.get('user_id') || current_user.id === 1 ) {
 
     // ========================================
     // ===== WARNING:  DANGER.JS  AHEAD =======
@@ -265,14 +265,21 @@ $(function(){
   window.current_user.fetch();
 
   $.getJSON("/places.json", function(data){
-    window.places = data
-    $("body").css({
+    window.places = data;
+    var height = $( window ).height();
+    var storyCont = $( '#story-container' ).height();
+    //alert( height + " " + storyCont )
+    if ( height > storyCont ) {
+        $('#story-container').css( 'padding-bottom', 1.5*(height - storyCont) ); 
+    }
+    
+    // $("body").css({
 
-      // background: "url("+_.where(places, {id: place_id})[0]["background_img"]+")",
-      
-      // height: document.body.clientHeight
-      // height: "1000 px"
-    })
+    //   // background: "url("+_.where(places, {id: place_id})[0]["background_img"]+")",
+
+    //   // height: document.body.clientHeight
+    //   // height: "1000 px"
+    // });
     
 
     // debugger
