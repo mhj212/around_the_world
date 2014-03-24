@@ -9,12 +9,16 @@ html, body {
 	margin: 0 auto;
 	height: 1000px; 
 	/*width: 100%;*/
-    width: 1245px;
+    /*width: 1245px;*/
+width: 100%;
 }
 
 .main-page-div {
-    position: absolute;
-    margin: 70px;
+    /*position: absolute;*/
+margin: 0px auto;
+position: relative;
+top: 70px;
+    /*margin: 70px;*/
 	padding: 100px;
 	background: rgba(255,255,255,0.5);
 	text-align: center;
