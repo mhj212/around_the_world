@@ -8,16 +8,16 @@ html, body {
 	background-size: cover;
 	margin: 0 auto;
 	height: 1000px; 
-	/*width: 100%;*/
+
     /*width: 1245px;*/
-width: 100%;
+	width: 100%;
 }
 
 .main-page-div {
     /*position: absolute;*/
-margin: 0px auto;
-position: relative;
-top: 70px;
+	margin: 0px auto;
+	position: relative;
+	top: 70px;
     /*margin: 70px;*/
 	padding: 100px;
 	background: rgba(255,255,255,0.5);
@@ -67,24 +67,24 @@ top: 70px;
 	width: 100%;
 
     /* set dimensions */ 
-/*height: 1000px;*/
-height: 100%;
-padding-bottom: 100px;
+	/*height: 1000px;*/
+	height: 100%;
+	padding-bottom: 100px;
 	/*width: 1245px;*/
 
 }
 
 .country-main-div {
 /*position: absolute;*/
-position: relative;
-top: 60px;
+	position: relative;
+	top: 60px;
     margin: 95px;
 	padding: 100px;
 	/*width: 80%;*/
 	background: rgba(255,255,255,0.7);
 	text-align: center;
     font-family: 'Esteban', serif;
-margin-top: 0px;
+	margin-top: 0px;
     /* Set Dimensions */
     /*width: 1000px;*/
 }
@@ -92,6 +92,13 @@ margin-top: 0px;
 
 .country-main-div h1 {
 	font-size: 100px;
+
+}
+
+@media (max-width: 800px) {
+	.country-main-div {
+		width: 600px;
+	}
 }
 
 /* STORY INPUT */
