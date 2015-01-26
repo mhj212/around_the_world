@@ -15,6 +15,7 @@ describe PlacesController do
 
      it "renders the home page" do
         visit '/'
+       #
        # find('h1', :visible => true).text.should == "Around The World"
        # wait_until{ page.has_content?('Around The World')}
        # find(:html, 'h1').text.should == "Around The World"
