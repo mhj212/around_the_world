@@ -84,7 +84,7 @@ var StoryView = Backbone.View.extend({
 var FormView = Backbone.View.extend({
 
   initialize: function(){
-    // this.list = new PokemonListView();
+   
     // hides the update button
     this.$('.update_button').hide();
 
@@ -106,7 +106,7 @@ var FormView = Backbone.View.extend({
     this.$('#story_body_input').val(model.get("body"));
     this.$('#new_place_id').val(model.get("place_id"));
     this.$('#new_user_id').val(model.get("user_id"));
-    // this.$('#pokemon_select').val(model.get("pokemon_type"));
+    
 
     // attach an on click callback function
     this.$('.update_button').on("click", function(e){
@@ -119,7 +119,7 @@ var FormView = Backbone.View.extend({
         "body": form_view.$('#story_body_input').val(),
         "place_id": form_view.$('#new_place_id').val(),
         "user_id": form_view.$('#new_user_id').val(),
-       // "pokemon_type" : form_view.$('#pokemon_select').val()
+      
       })
 
       // makes ajax call to server to "save" changes
@@ -144,7 +144,7 @@ var FormView = Backbone.View.extend({
 
   submitCallback: function(e){
     e.preventDefault();
-    // this should also make a new animal
+    
     var array_of_input_data = this.$el.serializeArray();
 
 
@@ -155,7 +155,7 @@ var FormView = Backbone.View.extend({
       body: array_of_input_data[1].value,
       place_id: array_of_input_data[2].value,
       user_id: array_of_input_data[3].value,
-      // pokemon_type: array_of_input_data[2].value
+      
     });
     this.resetValues()
   },
@@ -168,7 +168,7 @@ var FormView = Backbone.View.extend({
 
 })
 
-// (see also Pokemans)
+
 var StoryCollection = Backbone.Collection.extend({
   
   initialize: function(){
@@ -177,40 +177,22 @@ var StoryCollection = Backbone.Collection.extend({
 
   url: "/stories",
 
-  // old way
-  // model: Squirtle,
 
   model: Story
-  // model: function(attrs, options){
 
-  //   // attrs
-  //   // {
-  //   //   name: array_of_input_data[0].value,  // $('#name_input').val()
-  //   //   bio: array_of_input_data[1].value,
-  //   //   pokemon_type: array_of_input_data[2].value
-  //   // }
-
-
-  //   // console.log("something was added!", attrs)
- 
-  //     return new Story(attrs);
-    
-    
-  
-  // }
 })
 
 var StoryListView = Backbone.View.extend({
 
   initialize: function(){
-    // this means "PokemonListView" instance
+    
 
 
     var place_id = parseInt(location.pathname.replace('/places/', ''));
     window.place_id = place_id
 
     this.collection = new StoryCollection();
-    // any change to the collection causes the PListView to re-render itself
+    
     this.listenTo(this.collection, "all", this.render );
     this.collection.fetch({data: {place_id: place_id}});
     this.views = [];
@@ -241,7 +223,7 @@ var StoryListView = Backbone.View.extend({
         var story_view = new StoryView({
           model: story
         });
-        // console.log(pokemon, pokemon_view, "New Pokemon!");
+       
         // console.log(this, "this?");
 
         self.$el.append(story_view.$el);
@@ -256,8 +238,7 @@ var StoryListView = Backbone.View.extend({
 $(function(){
 
   window.form_view = new FormView();
-  // this collection actually belongs to the PokemonList
-  // window.collection = new PokemonView();
+  
   window.story_list_view = new StoryListView();
 
   window.current_user = new CurrentUser();
